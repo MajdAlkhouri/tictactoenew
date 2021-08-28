@@ -5,6 +5,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(./img/toys-2561392__480.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
 }
 
 .player-panal {
@@ -31,13 +36,15 @@ body {
 }
 
 table {
-    
     border-collapse: collapse;
+
 }
 
-.all{
+.all {
+    position: absolute;
     width: 500px;
     height: 500px;
+
 }
 
 tr {
@@ -100,27 +107,68 @@ table tr td:last-child {
     transform: rotate(90deg) scaleX(0.0);
 }
 
-.over{
-    position: absolute;
+.top {
+    position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    z-index: 2;
-    height: 100%;
-    animation: zoomIn 225ms ease-in-out;
-    top: 0;
-
+    z-index: 6;
+    background: #f2d552;
+    align-items: center;
+    
+   
 }
 
+.play{
+    color: white;
+}
+
+.over {
+    height: 80vh;
+    background-image: url(./img/GameOver.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+    top: 0;
+    width: 100%;
+}
 
 @keyframes zoomIn {
-    from{
+    from {
         opacity: 0;
         transform: scale(0);
     }
-
-    to{
+    to {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.restart-btn {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgb(247, 247, 7);
+    z-index: 2;
+    width: 336px;
+    height: 88px;
+    color: black;
+    font-size: 60PX;
+    cursor: pointer;
+    bottom: 7px;
+    position: fixed;
+}
+
+.restart-btn:hover {
+    background-color: rgb(43, 146, 225);
+}
+
+.gameover-button {
+    height: 20vh;
+    background: #f2d552;
+    display: flex;
+    justify-content: center;
 }
